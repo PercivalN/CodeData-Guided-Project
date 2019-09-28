@@ -15,6 +15,7 @@
 		DD45E4C92335BA6A005174FD /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD45E4C72335BA6A005174FD /* Tasks.xcdatamodeld */; };
 		DD45E4CB2335BF8E005174FD /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45E4CA2335BF8E005174FD /* Task+Convenience.swift */; };
 		DD45E4CD2337ED10005174FD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45E4CC2337ED10005174FD /* CoreDataStack.swift */; };
+		DDAEB4B023400BA500D211CF /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB4AF23400BA500D211CF /* TaskController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DD45E4C82335BA6A005174FD /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
 		DD45E4CA2335BF8E005174FD /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 		DD45E4CC2337ED10005174FD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		DDAEB4AF23400BA500D211CF /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				DD45E4BE2335937A005174FD /* LaunchScreen.storyboard */,
 				DD45E4C12335937A005174FD /* Info.plist */,
 				DD45E4CE2337EF50005174FD /* Models */,
+				DDAEB4B123400BAE00D211CF /* Model Controllers */,
 			);
 			path = "Guided-Task";
 			sourceTree = "<group>";
@@ -79,6 +82,14 @@
 				DD45E4C72335BA6A005174FD /* Tasks.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		DDAEB4B123400BAE00D211CF /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB4AF23400BA500D211CF /* TaskController.swift */,
+			);
+			name = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 				DD45E4CB2335BF8E005174FD /* Task+Convenience.swift in Sources */,
 				DD45E4B823359379005174FD /* ViewController.swift in Sources */,
 				DD45E4B623359379005174FD /* AppDelegate.swift in Sources */,
+				DDAEB4B023400BA500D211CF /* TaskController.swift in Sources */,
 				DD45E4C92335BA6A005174FD /* Tasks.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

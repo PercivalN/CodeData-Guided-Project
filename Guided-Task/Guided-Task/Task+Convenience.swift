@@ -12,7 +12,7 @@ import CoreData
 // Core data already created the Task class, so we just want to add some extra functionality onto it. You csn get ot the Task file by cmd clicking the Task.
 extension Task {
 
-	convenience init(name: String, notes: String, context: NSManagedObjectContext) {
+	convenience init(name: String, notes: String?, context: NSManagedObjectContext) {
 
 		// Setting up the generic NSManagedObject functionality of the modal object
 		// The generic chunk of clay

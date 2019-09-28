@@ -13,6 +13,13 @@ import CoreData
 
 class CoreDataStack {
 
+	// This is the singleton
+	static let shared = CoreDataStack()
+
+	private init() {
+
+	}
+
 	//  Lazy means that the compiler will not initialize the container when the CoreDataStack is initialized, only when the container variable is called.
 	lazy var container: NSPersistentContainer = {
 		let container = NSPersistentContainer(name: "Tasks")
@@ -29,4 +36,14 @@ class CoreDataStack {
 	var mainContext: NSManagedObjectContext {
 		return container.viewContext
 	}
+
+	func saveToPersistentStore() {
+		do {
+			try mainContext.save()
+		} catch {
+			NSLog("Error saving context: \(error)")
+			mainContext.reset() // This resets the mainContext if there is an eroor saving.
+		}
+	}
+
 }
