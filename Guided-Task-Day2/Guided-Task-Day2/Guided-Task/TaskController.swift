@@ -11,19 +11,20 @@ import CoreData
 
 class TaskController {
 
-	@discardableResult func createTask(with name: String, notes: String?) -> Task {
+	@discardableResult func createTask(with name: String, notes: String?, priority: TaskPriority) -> Task {
 
-		let task = Task(name: name, notes: notes, context: CoreDataStack.shared.mainContext)
+		let task = Task(name: name, notes: notes, priority: priority, context: CoreDataStack.shared.mainContext)
 
 		CoreDataStack.shared.saveToPersistentStore()
 
 		return task
 	}
 
-	func updateTask(task: Task, with name: String, notes: String?) {
+	func updateTask(task: Task, with name: String, notes: String?, priority: TaskPriority) {
 
 		task.name = name
 		task.notes = notes
+		task.priority = priority.rawValue
 
 		CoreDataStack.shared.saveToPersistentStore() // After you change the name and notes of the task, they are only in memory, which is why we have to save them to the Persistent Store.
 	}
